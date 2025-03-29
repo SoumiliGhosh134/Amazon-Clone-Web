@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.1/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Web3 Amazon Clone</h1>
+
+        <!-- Product Listing Section -->
+        <div class="section">
+            <h2>List a Product</h2>
+            <input id="productName" type="text" placeholder="Product Name">
+            <input id="productPrice" type="number" placeholder="Product Price (ETH)">
+            <button onclick="createProduct()">Create Product</button>
+        </div>
+
+        <!-- Purchase Section -->
+        <div class="section">
+            <h2>Buy a Product</h2>
+            <input id="productId" type="number" placeholder="Product ID">
+            <button onclick="purchaseProduct()">Purchase</button>
+        </div>
+
+        <!-- Review Section -->
+        <div class="section">
+            <h2>Submit a Review</h2>
+            <input id="reviewUser" type="text" placeholder="User Address">
+            <input id="reviewRating" type="number" min="1" max="5" placeholder="Rating (1-5)">
+            <input id="reviewComment" type="text" placeholder="Comment">
+            <button onclick="submitReview()">Submit Review</button>
+        </div>
+
+        <!-- Product Display Section -->
+        <div class="section" id="productList">
+            <h2>Available Products</h2>
+            <div id="products"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
